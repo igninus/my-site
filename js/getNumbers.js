@@ -1,4 +1,4 @@
-function getNumbers(value) {
+const getNumbers = (value) => {
   let numbersInString = '';
   findNumbersInString();
 
@@ -15,16 +15,11 @@ function getNumbers(value) {
     }
   }
 
-  function isNumber(suspectNumber) {
-    const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-    return numbers.includes(suspectNumber);
-  }
-
   function isNumberParse(suspectNumber) {
     suspectNumber = parseInt(suspectNumber, 10);
     return !Number.isNaN(suspectNumber);
   }
-}
+};
 
 const getNumbersTest = () => {
   console.log(getNumbers('2023 год'));

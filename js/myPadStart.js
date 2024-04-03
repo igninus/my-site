@@ -1,4 +1,4 @@
-function myPadStart(str, minLength, addon) {
+const myPadStart = (str, minLength, addon) => {
   const deficientLength = minLength - str.length;
 
   if (deficientLength <= 0) {
@@ -13,7 +13,7 @@ function myPadStart(str, minLength, addon) {
 
 
   function setPadStr () {
-    while (padStr.length < deficientLength) {
+    while (padStr.length <= deficientLength) {
       padStr += addon;
     }
   }
@@ -23,7 +23,7 @@ function myPadStart(str, minLength, addon) {
       padStr = padStr.slice(0, deficientLength);
     }
   }
-}
+};
 
 const myPadStartTest = () => {
   console.log('01: ', myPadStart('1', 2, '0'));
@@ -32,6 +32,6 @@ const myPadStartTest = () => {
   console.log('wewq: ', myPadStart('q', 4, 'we'));
 
   console.log('qwerty: ', myPadStart('qwerty', 4, '0'));
-}
+};
 
 myPadStartTest();

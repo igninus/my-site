@@ -1,4 +1,4 @@
-function isPalindrome (str) {
+const isPalindrome = (str) => {
   cleanString();
   let reversedStr = '';
   reverseStr();
@@ -15,10 +15,10 @@ function isPalindrome (str) {
       reversedStr = letter + reversedStr;
     }
   }
-}
+};
 
 // 1.2
-function isPalindrome1 (str) {
+const isPalindrome1 = (str) => {
   const getHalfLength = () => str.length / 2;
   function isPalindromeFor () {
     for (let i = 0; i < getHalfLength(str); i++) {
